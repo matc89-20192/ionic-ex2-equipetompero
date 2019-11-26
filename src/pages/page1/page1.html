@@ -8,13 +8,9 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <ion-item>
+    <ion-label id="textView">{{cumprimento}}{{nome}}!</ion-label>
+  </ion-item>
 
-  <img src="assets/icon/favicon.ico" alt="" />
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <button id="btnTrocar" (click)="trocar()" ion-button secondary>Trocar Usuário</button>
 </ion-content>

@@ -7,17 +7,10 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+<ion-content padding>
+  <ion-item>
+    <ion-input name="editText"[(ngModel)]="editText" value="{{nome}}" id="editText"type="text"></ion-input>
+  </ion-item>
+  <button id="btnConfirmar" (click)="confirmar()" ion-button secondary>Confirmar</button>
+  <button id="btnCancelar" (click)="cancelar()" ion-button secondary>Cancelar</button>
 </ion-content>
